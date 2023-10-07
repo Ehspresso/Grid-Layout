@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template: 15% 85% / 20% 80%;
+    font-family: 'Chango', sans-serif;
+}
+
+/*-------------------------------------Header----------------------------------------------------*/
+
+.header {
+    grid-column: 2;
+    display: grid;
+    grid-template: 50% 50% / 60% 40%;
+    background-color: bisque;
+    padding: 10px 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-search {
+    flex-grow: 1;
+}
+
+.search-bar {
+    justify-content: left;
+}
+
+.greeting {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.greeting-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile, .user-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile {
+    justify-content: right;
+    margin-right: 25px;
+}
+
+.user-actions {
+    justify-content: space-around;
+}
+
+.user-actions p {
+    padding: 6px 20px;
+    border-radius: 20px;
+    background-color: #6ee7b7;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+}
+
+/*--------------------------------------Sidebar-------------------------------------------------*/
+
+.dashboard {
+    grid-row: 1/3;
+    grid-column: 1;
+    background-color: #6ee7b7;
+    display: grid;
+    grid-template: 10% 1fr 1fr / 100%;
+    padding: 15px;
+}
+
+.dashboard-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-shadow: 0 0 3px black;
+}
+
+#dashboard-logo {
+    text-shadow: 0 0 3px black;
+}
+
+.dashboard-title h3 {
+    width: min-content;
+}
+
+.dashboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.dashboard ul li p {
+    width: min-content;
+    margin: 0;
+    font-weight: bold;
+    color:white;
+    text-shadow: 0 0 3px black;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+/*-------------------------------------------Content---------------------------------------------*/
+
+.content {
+    grid-row: 2;
+    display: grid;
+    grid-template: 5% 1fr 1fr 1fr / 70% 30%;
+    background-color: azure;
+    padding: 30px 15px;
+}
+
+#header2-projects {
+    grid-row: 1;
+    display: flex;
+    align-items:end;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+#header2-announcements {
+    grid-row: 1;
+    grid-column: 2;
+    display: flex;
+    align-items:end;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+#announcements {
+    background-color: white;
+    padding: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: #6ee7b7;
+}
+
+#announcements p {
+    height: max-content;
+}
+
+#divider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 0.25px solid black;
+}
+
+.trending-container {
+    grid-row: 3 / 5;
+    display: grid;
+    grid-template: 1fr 2fr 2fr 2fr 2fr / 40% 60%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px 0px 0px 15px;
+    background-color: #6ee7b7;
+}
+
+#header2-trending {
+    grid-column: 1 / 3;
+}
+
+.projects {
+    grid-row: 2 / 5;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div[id|="project"]{
+    min-height: 0;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    background-color: bisque;
+    box-shadow: inset 0.5em 0 0 pink, 0.2em 0.2em 0.2em rgba(0,0,0,0.3);
+}
+
+.project-images {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.content img {
+    height: 20px;
+    width: 20px;
+    margin: 0px 3px;
+}
+
+.content p {
+    height: 55%;
+    font-size: 13px;
+    margin: 10px 0px;
+    overflow-y: scroll;
+}
+
+/*----------------------------------------Global-----------------------------------------------*/
+
+.trending-container img {
+    height: 60px;
+    width: 60px;
+}
+
+#search-search {
+    border-radius: 10px;
+}
+
+#search-img-search {
+    height: 25px;
+    width: 25px;
+}
+
+#image-bell-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.dashboard ul li:hover {
+    text-decoration: underline white;
+    cursor: pointer;
+}
+
+.user-actions p:hover, .project-images img:hover {
+    transform: scale(0.8);
+    cursor: pointer;
+}
