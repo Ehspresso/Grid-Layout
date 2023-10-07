@@ -259,3 +259,7 @@ div[id|="project"]{
     transform: scale(0.8);
     cursor: pointer;
 }
+
+.trending-container p {
+    font-size: 12px;
+}
